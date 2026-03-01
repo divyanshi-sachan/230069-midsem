@@ -1,0 +1,172 @@
+{
+  "student_metadata": {
+    "name": "Divyanshi Sachan",
+    "roll_number": "230059",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part A",
+    "submission_date": "2026-03-01"
+  },
+  "llm_tools_used": [
+    { "tool_name": "Gemini", "model": "Gemini 2.0 Flash", "provider": "Google" },
+    { "tool_name": "ChatGPT", "model": "GPT-4o", "provider": "OpenAI" },
+    { "tool_name": "Claude", "model": "Claude Sonnet 4", "provider": "Anthropic" }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-01",
+      "tool_name": "Gemini",
+      "model": "Gemini 2.0 Flash",
+      "provider": "Google",
+      "purpose": "Deep research phase 1 — finding GMM/EM papers (2009–2012, CORE A*) that fit the assignment",
+      "prompt": "I have an assignment to select one paper from 2009–2012 published in a CORE A* venue (ICML, NeurIPS, JMLR, etc.). The paper’s main method must be Gaussian Mixture Model or EM-based, it must be methodological (not a dataset or benchmark paper), and reproducible on CPU with public or synthetic data. I want to do proper research first. Can you give me a list of strong GMM/EM papers from that period with venue, year, and one-line summary of what each paper does?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Gemini gave me a list of several papers including: Naim & Gildea (ICML 2012) on EM for unbalanced GMMs, a JMLR mixture-of-factor-analyzers paper, and Poon, Zhang, Chen, Wang (ICML 2010) — 'Variable Selection in Model-Based Clustering: To Do or To Facilitate' — which extends GMM to handle variable relevance in high-dimensional clustering via EM. I noted all of these and the Poon et al. one stood out because of the clear methodological angle (variable selection inside GMM).",
+      "student_verification": "I checked ICML 2010 proceedings and found the Poon et al. paper at https://icml.cc/Conferences/2010/papers/207.pdf. I also confirmed ICML is CORE A* on portal.core.edu.au.",
+      "confidence_level": 4,
+      "follow_up_action": "Continued the same conversation with Gemini — asked for more detail on the Poon et al. paper and how it fits the assignment."
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-01",
+      "tool_name": "Gemini",
+      "model": "Gemini 2.0 Flash",
+      "provider": "Google",
+      "purpose": "Continued deep research with Gemini — more detail on top candidates and fit for assignment",
+      "prompt": "From your list I’m most interested in the Poon et al. 2010 ICML paper on variable selection in model-based clustering. Can you summarize its main contribution in 2–3 sentences, whether it’s clearly GMM/EM-based, and whether the experiments use public or synthetic data? I need to be sure it’s methodological and CPU-reproducible.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Gemini summarized that the paper extends GMM with variable relevance (relevance weights per dimension) learned via EM; it’s a methodological contribution with clear theory, and the experiments use synthetic and/or public data with no GPU requirement. I used this to keep Poon et al. as a top candidate and then moved to ChatGPT to do a second round of research.",
+      "student_verification": "I skimmed the paper PDF to confirm it’s EM-based GMM with variable relevance and that experiments are on synthetic/public data.",
+      "confidence_level": 4,
+      "follow_up_action": "Finished my Gemini research and started a separate deep-research thread with ChatGPT on the same assignment and criteria."
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-01",
+      "tool_name": "ChatGPT",
+      "model": "GPT-4o",
+      "provider": "OpenAI",
+      "purpose": "Deep research phase 2 — same assignment, getting a second set of recommendations and verification from ChatGPT",
+      "prompt": "I’m doing an assignment where I need to pick one paper from 2009–2012 in a CORE A* venue (ICML, NeurIPS, JMLR). It has to be primarily GMM or EM-based, methodological (not dataset/benchmark), and reproducible on CPU with public/synthetic data. I’m doing research before deciding. Can you suggest 2–3 strong GMM/EM papers from that period with venue, year, and brief summary?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "ChatGPT suggested a few papers including the same Poon et al. (2010) ICML paper on variable selection in model-based clustering, plus one on convergence of EM for unbalanced mixtures. Having both Gemini and ChatGPT point to the Poon et al. paper reinforced it as a solid candidate. I continued in the same ChatGPT thread to dig into that paper.",
+      "student_verification": "I cross-checked the suggested papers with the actual venues and years; Poon et al. ICML 2010 was correct.",
+      "confidence_level": 4,
+      "follow_up_action": "Asked ChatGPT in the same conversation to verify method type, reproducibility, and data for the Poon et al. paper."
+    },
+    {
+      "interaction_id": 4,
+      "date": "2026-03-01",
+      "tool_name": "ChatGPT",
+      "model": "GPT-4o",
+      "provider": "OpenAI",
+      "purpose": "Continued deep research with ChatGPT — verifying Poon et al. fits assignment and is reproducible",
+      "prompt": "For the Poon, Zhang, Chen, Wang (2010) ICML paper 'Variable Selection in Model-Based Clustering: To Do or To Facilitate' — can you confirm: (1) is the main contribution methodological (GMM/EM extension) and not a new dataset or benchmark? (2) do they use public or synthetic data? (3) can it be reproduced on a CPU-only laptop?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "ChatGPT confirmed it’s a methodological extension of GMM (variable relevance in clustering, EM-based), uses synthetic and/or public data, and can be reproduced on CPU with standard EM-style computation. I saved this along with my Gemini notes to compile into one document before switching to Claude.",
+      "student_verification": "I read the paper’s abstract and method section; the description matched. No GPU or proprietary data mentioned.",
+      "confidence_level": 5,
+      "follow_up_action": "Compiled a PDF/summary of my Gemini and ChatGPT research (candidate list, pros/cons, notes on Poon et al.) and started a single conversation with Claude with that compiled context."
+    },
+    {
+      "interaction_id": 5,
+      "date": "2026-03-01",
+      "tool_name": "Claude",
+      "model": "Claude Sonnet 4",
+      "provider": "Anthropic",
+      "purpose": "Starting Claude thread with compiled research from Gemini and ChatGPT — one place to continue and decide",
+      "prompt": "I did deep research for my ML assignment using Gemini and ChatGPT. I’ve compiled the main findings into a short summary and pasted it below. I want to continue the rest of my work here with you.\n\n[Compiled summary]\nAssignment: Pick one paper from 2009–2012, CORE A* venue, primary method GMM or EM-based, methodological, CPU-reproducible, public/synthetic data.\n\nFrom Gemini: Candidates included Naim & Gildea ICML 2012 (unbalanced EM), and Poon, Zhang, Chen, Wang ICML 2010 — \"Variable Selection in Model-Based Clustering: To Do or To Facilitate\" — GMM extended with variable relevance via EM, clear theory, synthetic/public data.\n\nFrom ChatGPT: Same Poon et al. 2010 ICML paper recommended; confirmed methodological (GMM/EM extension for variable selection), not dataset/benchmark paper, uses public/synthetic data, CPU-reproducible.\n\nI’m leaning toward the Poon et al. 2010 paper. Can you help me (1) confirm it’s the right fit for the assignment, and (2) then go deep on understanding the method and reproducibility so I can submit and prepare for Part B/C?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Claude confirmed the paper fits the assignment (ICML 2010 CORE A*, GMM/EM-based, methodological, CPU-reproducible) and agreed to walk through the method and reproducibility in the same thread. I continued the entire rest of the conversation with Claude from here.",
+      "student_verification": "I had already verified the paper URL and CORE A* status; Claude’s confirmation matched my research.",
+      "confidence_level": 5,
+      "follow_up_action": "Continued in the same Claude thread — asked how variable selection and EM work in the paper."
+    },
+    {
+      "interaction_id": 6,
+      "date": "2026-03-01",
+      "tool_name": "Claude",
+      "model": "Claude Sonnet 4",
+      "provider": "Anthropic",
+      "purpose": "Continued with Claude — understanding the algorithm (variable relevance, EM) for method alignment and Part C",
+      "prompt": "In the Poon et al. 2010 paper, how exactly does variable selection work inside the GMM? What is the E-step and M-step and how is variable relevance incorporated?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Claude explained that the model adds relevance weights per variable so some dimensions matter more for the likelihood; variable selection is done by driving some relevances toward zero. The EM alternates E-step (responsibilities) and M-step (mixture parameters and relevance parameters). This gave me a clear picture for my justification and for Part C.",
+      "student_verification": "I read the model and algorithm section in the paper and matched the E-step/M-step and variable-relevance formulation to Claude’s explanation.",
+      "confidence_level": 5,
+      "follow_up_action": "Asked Claude in the same thread about reproducibility (data, code, CPU)."
+    },
+    {
+      "interaction_id": 7,
+      "date": "2026-03-01",
+      "tool_name": "Claude",
+      "model": "Claude Sonnet 4",
+      "provider": "Anthropic",
+      "purpose": "Continued with Claude — reproducibility on CPU and what data/code to use for Part B",
+      "prompt": "For Part B I need to reproduce this on a CPU-only laptop. What kind of data do they use in the paper, and can I implement it with standard tools (e.g. Python numpy/scipy or extending sklearn GMM) without GPU?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Claude said the paper uses synthetic Gaussian data and possibly public datasets; implementation is standard EM plus relevance updates, feasible in Python with numpy/scipy or by extending GMM code, no GPU needed. I used this to plan my Part B and to write the reproducibility part of my justification.",
+      "student_verification": "I confirmed in the paper that experiments are on synthetic/public data and the algorithm is iterative EM with no special hardware.",
+      "confidence_level": 5,
+      "follow_up_action": "Asked Claude for a final sanity check before submission."
+    },
+    {
+      "interaction_id": 8,
+      "date": "2026-03-01",
+      "tool_name": "Claude",
+      "model": "Claude Sonnet 4",
+      "provider": "Anthropic",
+      "purpose": "Final check in same Claude thread — venue and paper type before submitting",
+      "prompt": "Just to be sure before I submit: Poon et al. is definitely ICML 2010, and the main contribution is methodological (new model/algorithm for variable selection in GMM clustering), not a new dataset or benchmark, correct?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Claude confirmed ICML 2010 and that the contribution is methodological. I submitted the form and created my GitHub repo after this.",
+      "student_verification": "I had the PDF open at https://icml.cc/Conferences/2010/papers/207.pdf; the abstract clearly states the methodological contribution.",
+      "confidence_level": 5,
+      "follow_up_action": "Submitted the Google Form and created the repository."
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 5,
+      "tool": "Claude",
+      "prompt": "I did deep research for my ML assignment using Gemini and ChatGPT. I’ve compiled the main findings into a short summary and pasted it below. I want to continue the rest of my work here with you. [Compiled summary] ... I’m leaning toward the Poon et al. 2010 paper. Can you help me (1) confirm it’s the right fit for the assignment, and (2) then go deep on understanding the method and reproducibility so I can submit and prepare for Part B/C?",
+      "why_important": "This was the handoff from my Gemini + ChatGPT research to a single continuous Claude thread. Giving Claude the compiled context kept the story coherent and avoided switching tools randomly. All later verification and deep dives happened in this one place."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 1,
+      "tool": "Gemini",
+      "prompt": "I have an assignment to select one paper from 2009–2012 published in a CORE A* venue (ICML, NeurIPS, JMLR, etc.). The paper’s main method must be Gaussian Mixture Model or EM-based, it must be methodological (not a dataset or benchmark paper), and reproducible on CPU with public or synthetic data. I want to do proper research first. Can you give me a list of strong GMM/EM papers from that period with venue, year, and one-line summary of what each paper does?",
+      "why_important": "This started my deep research phase. Gemini gave me the initial candidate list that included the Poon et al. 2010 ICML paper, which I then explored further in the same thread and later verified with ChatGPT."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 3,
+      "tool": "ChatGPT",
+      "prompt": "I’m doing an assignment where I need to pick one paper from 2009–2012 in a CORE A* venue (ICML, NeurIPS, JMLR). It has to be primarily GMM or EM-based, methodological (not dataset/benchmark), and reproducible on CPU with public/synthetic data. I’m doing research before deciding. Can you suggest 2–3 strong GMM/EM papers from that period with venue, year, and brief summary?",
+      "why_important": "Second deep-research phase with ChatGPT, same assignment context. Having both Gemini and ChatGPT suggest the same paper (Poon et al.) gave me confidence before I compiled everything and moved to Claude."
+    },
+    {
+      "rank": 4,
+      "interaction_id": 6,
+      "tool": "Claude",
+      "prompt": "In the Poon et al. 2010 paper, how exactly does variable selection work inside the GMM? What is the E-step and M-step and how is variable relevance incorporated?",
+      "why_important": "After handing off my compiled research to Claude, this follow-up got the precise algorithm understanding I needed for method alignment and for writing my justification and Part C."
+    },
+    {
+      "rank": 5,
+      "interaction_id": 4,
+      "tool": "ChatGPT",
+      "prompt": "For the Poon, Zhang, Chen, Wang (2010) ICML paper 'Variable Selection in Model-Based Clustering: To Do or To Facilitate' — can you confirm: (1) is the main contribution methodological (GMM/EM extension) and not a new dataset or benchmark? (2) do they use public or synthetic data? (3) can it be reproduced on a CPU-only laptop?",
+      "why_important": "This was the last step of my ChatGPT research before compiling. It gave me clear yes/no on methodological, data, and CPU reproducibility, which I then included in the summary I pasted to Claude."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Part A of the Mid-Semester Examination. I first did deep research with Gemini (Google) to find GMM/EM papers from 2009–2012 in CORE A* venues and got a shortlist that included the Poon et al. 2010 ICML paper. I then did deep research with ChatGPT on the same assignment and got overlapping recommendations and verification. I compiled the findings from Gemini and ChatGPT into a summary and gave that to Claude; I continued the rest of my conversation in a single thread with Claude — confirming the paper fit, understanding the method, and checking reproducibility — before submitting. I used LLM outputs only as comprehension and research aids and independently verified the paper at the ICML 2010 proceedings and read it to confirm method alignment and reproducibility. I chose this paper because it proposes a methodological extension of Gaussian Mixture Models to handle variable relevance in high-dimensional clustering. It is a classical, EM-based probabilistic model with clear theoretical grounding and reproducible experiments on synthetic or public datasets using CPU-only computation.",
+    "understanding_acknowledged": true,
+    "signature": "Divyanshi Sachan",
+    "date": "2026-03-01"
+  }
+}
