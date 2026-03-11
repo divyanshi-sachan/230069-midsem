@@ -1,0 +1,29 @@
+{
+  "task_tag": "Task 2.2",
+  "interaction_log": [
+    {
+      "timestamp": "2026-03-11T13:00:00+05:30",
+      "tool_name": "ChatGPT",
+      "prompt": "Implement E-step for a two-pouch PLTM: responsibilities for Y1 (K1 states) and Y2 (K2 states) given X1, X2 and current pi, mu, cov. Return r1, r2 matrices.",
+      "response_summary": "Used for coding assistance: the assistant provided a structure for log-responsibilities and normalisation. I adapted it to our mvnpdf and pouch indexing, and wrote the full E-step and M-step myself; I did not paste code verbatim.",
+      "code_used_verbatim": false,
+      "student_modification": "I integrated the E-step with our existing mvnpdf, N, K1, K2, and added the M-step and eigenvalue constraint. All parameter names and loop structure were adjusted to match the paper and our notebook."
+    },
+    {
+      "timestamp": "2026-03-11T13:30:00+05:30",
+      "tool_name": "Gemini",
+      "prompt": "In Python, how do I clip eigenvalues of a covariance matrix to [lam_min, lam_max] and reconstruct the matrix?",
+      "response_summary": "Used for implementation help: eigh, clip, then v @ diag(w) @ v.T. I implemented apply_eigenvalue_constraint myself using the paper's formula (sigma2_min, gamma*sigma2_max) and integrated it into the EM loop.",
+      "code_used_verbatim": false,
+      "student_modification": "I wrote apply_eigenvalue_constraint and constrain_covariances using the paper's Section 3; the logic is mine."
+    }
+  ],
+  "top_5_prompts": [
+    "Implement E-step for a two-pouch PLTM: responsibilities for Y1 (K1 states) and Y2 (K2 states) given X1, X2 and current pi, mu, cov. Return r1, r2 matrices.",
+    "In Python, how do I clip eigenvalues of a covariance matrix to [lam_min, lam_max] and reconstruct the matrix?"
+  ],
+  "student_verification": {
+    "declaration": "I used the LLM for implementation assistance on the E-step structure and eigenvalue clipping. I wrote and debugged the full EM loop, M-step, and constraint myself and annotated the notebook with paper references. No code was used verbatim. I ran the notebook and verified NMI results; I take responsibility for the submission.",
+    "code_used_verbatim": false
+  }
+}

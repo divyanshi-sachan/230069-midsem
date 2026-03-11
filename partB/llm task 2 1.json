@@ -1,0 +1,29 @@
+{
+  "task_tag": "Task 2.1",
+  "interaction_log": [
+    {
+      "timestamp": "2026-03-11T12:00:00+05:30",
+      "tool_name": "Gemini",
+      "prompt": "How should I generate a synthetic multifaceted dataset with two facets: one 3-component GMM on features 0-1 and one 2-component GMM on features 2-3, in Python?",
+      "response_summary": "Used for writing assistance: the assistant suggested sampling facet labels then sampling from per-facet Gaussians and concatenating. I implemented the generation logic myself and adjusted means/covariances to match the paper's setup; I did not copy code verbatim.",
+      "code_used_verbatim": false,
+      "student_modification": "I wrote the actual numpy code, chose the number of samples (1000), and set the mixture parameters. I saved to data/ and updated data/README.md myself."
+    },
+    {
+      "timestamp": "2026-03-11T12:15:00+05:30",
+      "tool_name": "Claude",
+      "prompt": "What file format and naming is standard for saving numpy arrays for a small ML dataset (X, labels)?",
+      "response_summary": "Used for light assistance: suggested .npy and descriptive names. I chose the filenames toy_multifacet_X.npy and toy_multifacet_labels_facet1.npy etc. myself.",
+      "code_used_verbatim": false,
+      "student_modification": "I implemented the save calls and directory structure myself."
+    }
+  ],
+  "top_5_prompts": [
+    "How should I generate a synthetic multifaceted dataset with two facets: one 3-component GMM on features 0-1 and one 2-component GMM on features 2-3, in Python?",
+    "What file format and naming is standard for saving numpy arrays for a small ML dataset (X, labels)?"
+  ],
+  "student_verification": {
+    "declaration": "I used the LLM for implementation guidance on multifaceted data generation and file naming. I wrote the generation and save code myself and chose all parameters. No code was copied verbatim. I ran the notebook and verified the outputs; I take responsibility for the submission.",
+    "code_used_verbatim": false
+  }
+}

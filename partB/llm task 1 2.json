@@ -1,0 +1,29 @@
+{
+  "task_tag": "Task 1.2",
+  "interaction_log": [
+    {
+      "timestamp": "2026-03-11T10:30:00+05:30",
+      "tool_name": "Claude",
+      "prompt": "What assumptions does the PLTM paper rely on? List main modelling assumptions (e.g. tree, Gaussian, singular parentage).",
+      "response_summary": "Used for reading comprehension: the assistant listed tree structure, discrete latents, conditional Gaussian pouches, and singular parentage. I matched these to Section 2 and my paper_understanding notes and wrote the three assumptions in the notebook myself.",
+      "code_used_verbatim": false,
+      "student_modification": "No code. I chose which three assumptions to highlight and wrote the explanations and violation examples myself."
+    },
+    {
+      "timestamp": "2026-03-11T10:45:00+05:30",
+      "tool_name": "Gemini",
+      "prompt": "Give one example of a violation of the singular parentage assumption in a latent tree model.",
+      "response_summary": "Used for reading comprehension: example of one observed variable depending on two latents. I used this idea to phrase my own violation example in Task 1.2.",
+      "code_used_verbatim": false,
+      "student_modification": "I adapted the example to our two-pouch setting and wrote the final text myself."
+    }
+  ],
+  "top_5_prompts": [
+    "What assumptions does the PLTM paper rely on? List main modelling assumptions (e.g. tree, Gaussian, singular parentage).",
+    "Give one example of a violation of the singular parentage assumption in a latent tree model."
+  ],
+  "student_verification": {
+    "declaration": "I used the LLM to clarify the paper's assumptions and one violation example. The choice of which assumptions to list and how to explain them (and their violations) is my own. I verified all content against the paper and take responsibility for the submission.",
+    "code_used_verbatim": false
+  }
+}

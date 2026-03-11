@@ -1,0 +1,29 @@
+{
+  "task_tag": "Task 2.3",
+  "interaction_log": [
+    {
+      "timestamp": "2026-03-11T14:00:00+05:30",
+      "tool_name": "Claude",
+      "prompt": "How do I compute NMI between a recovered clustering and ground truth in sklearn? And how to discretise continuous features for a feature curve (equal-width bins)?",
+      "response_summary": "Used for writing/coding assistance: normalized_mutual_info_score and digitize/percentile for bins. I wrote the feature-curve loop and the comparison paragraph myself; I did not copy code verbatim.",
+      "code_used_verbatim": false,
+      "student_modification": "I implemented the feature curve, saved the figure to results/, and wrote the result and comparison text (reported result vs paper, gap explanation) in my own words."
+    },
+    {
+      "timestamp": "2026-03-11T14:20:00+05:30",
+      "tool_name": "ChatGPT",
+      "prompt": "Rephrase this sentence for clarity: 'The observed difference in NMI values is an honest reflection of the simplified experimental setup.'",
+      "response_summary": "Used for light writing assistance: suggested a clearer phrasing. I kept the meaning and integrated it into my comparison paragraph; the substantive explanation (fixed tree, 64 restarts, 4 vs 9 attributes) is my own.",
+      "code_used_verbatim": false,
+      "student_modification": "I wrote the full comparison and reproducibility checklist myself; only minor wording was refined with LLM help."
+    }
+  ],
+  "top_5_prompts": [
+    "How do I compute NMI between a recovered clustering and ground truth in sklearn? And how to discretise continuous features for a feature curve (equal-width bins)?",
+    "Rephrase this sentence for clarity: 'The observed difference in NMI values is an honest reflection of the simplified experimental setup.'"
+  ],
+  "student_verification": {
+    "declaration": "I used the LLM for implementation tips (NMI, discretisation) and light rephrasing. The reported result, comparison with the paper, gap explanation, and reproducibility checklist are my own. I ran the notebook and verified all figures; I take responsibility for the submission.",
+    "code_used_verbatim": false
+  }
+}

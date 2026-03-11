@@ -1,0 +1,29 @@
+{
+  "task_tag": "Task 1.1",
+  "interaction_log": [
+    {
+      "timestamp": "2026-03-11T10:00:00+05:30",
+      "tool_name": "Gemini",
+      "prompt": "Summarise the PLTM model from the Poon et al. ICML 2010 paper in a few steps: what are pouches, latents, and how does the tree work?",
+      "response_summary": "Used for reading comprehension: the assistant outlined tree structure, discrete latents, pouches of observed variables, and conditional Gaussians. I cross-checked with the paper and wrote the task 1.1 description in my own words.",
+      "code_used_verbatim": false,
+      "student_modification": "No code in this task; only conceptual text. I wrote the final step-by-step description myself after verifying against the paper."
+    },
+    {
+      "timestamp": "2026-03-11T10:15:00+05:30",
+      "tool_name": "ChatGPT",
+      "prompt": "What is the eigenvalue constraint formula in Section 3 of the paper (sigma_min, sigma_max, gamma)?",
+      "response_summary": "Used for reading comprehension: clarified the bound on eigenvalues. I verified the formula in the paper and used it correctly in Task 2.2.",
+      "code_used_verbatim": false,
+      "student_modification": "N/A — conceptual only."
+    }
+  ],
+  "top_5_prompts": [
+    "Summarise the PLTM model from the Poon et al. ICML 2010 paper in a few steps: what are pouches, latents, and how does the tree work?",
+    "What is the eigenvalue constraint formula in Section 3 of the paper (sigma_min, sigma_max, gamma)?"
+  ],
+  "student_verification": {
+    "declaration": "I used the LLM for reading comprehension and to clarify PLTM structure and the eigenvalue constraint. I read the paper myself and wrote the Task 1.1 step-by-step description in my own words. No code was used verbatim. I verify the notebook content and take responsibility for the submission.",
+    "code_used_verbatim": false
+  }
+}

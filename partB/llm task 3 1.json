@@ -1,0 +1,29 @@
+{
+  "task_tag": "Task 3.1",
+  "interaction_log": [
+    {
+      "timestamp": "2026-03-11T15:00:00+05:30",
+      "tool_name": "Gemini",
+      "prompt": "How can I add a flag to an EM function to optionally skip the eigenvalue constraint or fix mixing proportions, so I can run ablations independently?",
+      "response_summary": "Used for implementation assistance: suggested use_eigenvalue_constraint and learn_pi parameters in run_em. I implemented the full run_em, e_step, m_step with these flags myself; the choice of which two components to ablate (eigenvalue constraint and learned pi) was entirely my own.",
+      "code_used_verbatim": false,
+      "student_modification": "I chose to ablate (1) eigenvalue constraint and (2) learned mixing proportions. I wrote the ablation code and the plot/table logic myself. The reasoning for why these two components is my own."
+    },
+    {
+      "timestamp": "2026-03-11T15:30:00+05:30",
+      "tool_name": "Claude",
+      "prompt": "Help me phrase an interpretation paragraph for an ablation where removing the constraint slightly improved NMI on our toy data.",
+      "response_summary": "Used for writing assistance: suggested framing (constraint as regulariser, effect subtle on easy data). I wrote the final interpretation paragraphs myself to match our actual results (0.9094→0.9156, 0.9094→0.9404 etc.) and to state that ablation choices and explanations are my own.",
+      "code_used_verbatim": false,
+      "student_modification": "All interpretation text was written by me; I only used the LLM for phrasing ideas. The decision to ablate eigenvalue constraint and learned π, and the explanation of what each reveals, are my own."
+    }
+  ],
+  "top_5_prompts": [
+    "How can I add a flag to an EM function to optionally skip the eigenvalue constraint or fix mixing proportions, so I can run ablations independently?",
+    "Help me phrase an interpretation paragraph for an ablation where removing the constraint slightly improved NMI on our toy data."
+  ],
+  "student_verification": {
+    "declaration": "I used the LLM for implementation help (flags for ablations) and for light writing assistance on interpretation phrasing. I declare that the choice of which two components to ablate (eigenvalue constraint and learned mixing proportions) and the explanation of why they were chosen and what they reveal are entirely my own, as required. I verified the notebook outputs and take responsibility for the submission.",
+    "code_used_verbatim": false
+  }
+}

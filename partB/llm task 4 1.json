@@ -1,0 +1,29 @@
+{
+  "task_tag": "Task 4.1",
+  "interaction_log": [
+    {
+      "timestamp": "2026-03-11T17:00:00+05:30",
+      "tool_name": "Claude",
+      "prompt": "Help me structure a 4-page report with sections: paper summary, reproduction setup and result, ablation findings, failure mode. What order and approximate length per section?",
+      "response_summary": "Used for writing assistance: suggested order and rough paragraph counts. I wrote the actual content of each section (summary, reproduction, ablations, failure) myself, using our real results and my own explanations.",
+      "code_used_verbatim": false,
+      "student_modification": "No code. I wrote the report.tex content; the LLM only helped with structure. All substantive content (paper summary, reproduction commentary, ablation findings, failure explanation) is mine."
+    },
+    {
+      "timestamp": "2026-03-11T17:30:00+05:30",
+      "tool_name": "ChatGPT",
+      "prompt": "Add TikZ block diagram for two-pouch PLTM and for entangled vs tree in LaTeX report.",
+      "response_summary": "Used for writing assistance: provided TikZ code for PLTM tree and entangled-vs-tree diagrams. I integrated them into report.tex and adjusted labels/captions; the narrative around the figures is my own.",
+      "code_used_verbatim": false,
+      "student_modification": "I adapted the diagrams to our setting (Y1, Y2, Pouch 1/2, X0–X3) and wrote the captions. Figure references and report flow are mine."
+    }
+  ],
+  "top_5_prompts": [
+    "Help me structure a 4-page report with sections: paper summary, reproduction setup and result, ablation findings, failure mode. What order and approximate length per section?",
+    "Add TikZ block diagram for two-pouch PLTM and for entangled vs tree in LaTeX report."
+  ],
+  "student_verification": {
+    "declaration": "I used the LLM for report structure and for TikZ diagram assistance. The content of the report (summary, reproduction setup and result including honest commentary on the gap, ablation findings, and failure mode explanation) is my own and reflects our actual notebooks and results. I take responsibility for report.pdf.",
+    "code_used_verbatim": false
+  }
+}

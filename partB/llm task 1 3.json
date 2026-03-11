@@ -1,0 +1,29 @@
+{
+  "task_tag": "Task 1.3",
+  "interaction_log": [
+    {
+      "timestamp": "2026-03-11T11:00:00+05:30",
+      "tool_name": "ChatGPT",
+      "prompt": "Explain how PLTM differs from Raftery and Dean style variable selection (choose one subset vs facilitate multiple facets).",
+      "response_summary": "Used for reading comprehension: contrasted 'do' variable selection (one subset) with 'facilitate' (multiple facets). I used this to structure my comparison and wrote the rubric answers and conceptual explanation myself.",
+      "code_used_verbatim": false,
+      "student_modification": "No verbatim code. I wrote the final rubric responses and the 9-section conceptual explanation after checking the paper."
+    },
+    {
+      "timestamp": "2026-03-11T11:20:00+05:30",
+      "tool_name": "Claude",
+      "prompt": "What are CVS and LFJ baselines in the context of variable selection for clustering?",
+      "response_summary": "Used for reading comprehension: brief description of these baselines. I verified against the paper and included them in my Task 1.3 answers in my own wording.",
+      "code_used_verbatim": false,
+      "student_modification": "I summarised the baselines and limitations in my own words."
+    }
+  ],
+  "top_5_prompts": [
+    "Explain how PLTM differs from Raftery and Dean style variable selection (choose one subset vs facilitate multiple facets).",
+    "What are CVS and LFJ baselines in the context of variable selection for clustering?"
+  ],
+  "student_verification": {
+    "declaration": "I used the LLM for reading support on PLTM vs baselines and on CVS/LFJ. All rubric answers and the conceptual explanation were written by me after verifying against the paper. No code was used verbatim. I take responsibility for the final submission.",
+    "code_used_verbatim": false
+  }
+}
